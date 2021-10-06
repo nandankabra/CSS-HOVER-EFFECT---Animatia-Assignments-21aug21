@@ -1,345 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            .b1{display: inline-block;
-                width: 280px;
-                height: 212px;
-                background-image: url("img/1.jpg");
-                background-size: cover;
-                box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
-                position: relative;
-                overflow: hidden;
-                float:left;
-                margin:12px;
-            }
-            .A1{
-                width: 40px;
-                height: 40px;
-                border-radius: 40px;
-                line-height: 40px;
-                background:#fff;
-                text-align: center;
-                position: absolute;
-            }
-            .S{
-                width: 280px;
-                height: 212px;
-                background:  rgba(0,0,0,0.5);
-                position: absolute;
-                
-            }
-            .S1{
-                top: -212px;
-                left: 0px;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-duration: 0.5s;
-
-            }
-            
-            .b1:hover .S1{
-                top: 0px;
-                
-            }
-            .S1 > a{
-                top:90px;
-                left:90px;
-                color:#464646;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .S2{
-                top: 0px;
-                right: -280px;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-duration: 0.5s;
-            }
-            .b1:hover .S2{
-                right: 0px;
-            }
-            .S2 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .S3{
-                top: 0px;
-                right: 280px;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-duration: 0.5s;
-            }
-            .b1:hover .S3{
-                right: 0px;
-            }
-            .S3 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .S4{
-                top: 212px;
-                right: 0px;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-duration: 0.5s;
-            }
-            .b1:hover .S4{
-                top: 0px;
-            }
-            .S4 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .S5{
-                top: 0px;
-                right: 0px;
-                opacity: 0;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-duration: 0.3s;
-            }
-            .b1:hover  .S5{
-                top:0px;
-                opacity: 1;
-            }
-            .S5 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .a5-1,.a5-2{
-                 transition: all 0.2s linear;
-            }
-            .b1:hover > .S5 > .a5-1{
-            left: 90px !important;
-            }
-             .b1:hover > .S5 > .a5-2{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animitia Assignment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+   
+   
+   
+   
+   
+   
+   <style>
+        .common{
+            width: 280px;
+            height: 212px;
+            background:black;
+            background-image: url("img/photo-1.jpg");
+            background-size: cover;
+            box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+            display: inline-block;
+            cursor: pointer;
+        }
+        .box1{
+            position: relative;
+            overflow: hidden;
+            margin: 12px;
+            float: left;
+        }
+        .overlay1{
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            top:-212px;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out
+        }
+        .box1:hover .overlay1{
+            top: 0px;
+        }
+        .overlay1 > a{
+            width:40px;
+            height:40px;
+            background:white;
+            display:inline-block;
+            border-radius:40px;
+            text-align:center;
+            line-height:40px;
+            position:absolute;
+            top:90px;
+            left:90px;
+            color: #464646;
+        }
+        .tagb{
             left: 140px !important;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .a5-1{
-                left:60px !important;
-             }
-            .a5-2{
-                left: 170px !important;
-            }
-            .S6{
-                top: 0px;
-                right: 0px;
-                opacity: 0;
-                transition: all 0.3s ease-in-out ;
-            }
-            .S6 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .b1:hover  .S6{
-                top:0px;
-                opacity: 1;
-            }
-            .S6 > a{
-                    top:90px;
-                    left:90px;
-                    color:#464646;
-            }
-            .a5-1,.a5-2{
-                 transition: all 0.2s linear;
-            }
-            .b1:hover > .S6 > .a5-1{
+        }
+        .a5-1{
+            left:60px !important;
+        }
+        .a5-2{
+            left: 170px !important;
+        }
+        .a6-1{
+            left:110px !important;
+        }
+        .a6-2{
+            left: 110px !important;
+        }
+        .overlay2{
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            left:-280px;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out
+        }
+        .box2{
+            position: relative;
+            overflow: hidden;
+            margin: 12px;
+            float: left;
+        }
+        .overlay2 > a{
+            width: 40px;
+            height: 40px;
+            background:white;
+            display: inline-block;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            color: #464646;
+        }
+        .box2:hover .overlay2{
+            left:0px;
+        }
+        .box3{
+            position: relative;
+            overflow: hidden;
+            margin: 12px;
+            float: left;
+        }
+        .overlay3{
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            bottom:-212px;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out
+        }
+        .overlay3 > a{
+            width: 40px;
+            height: 40px;
+            background:white;
+            display: inline-block;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            color: #464646;
+        }
+        .box3:hover .overlay3{
+            bottom:0px;
+        }
+        .box4{
+            position: relative;
+            overflow: hidden;
+            margin: 12px;
+            float: left;
+        }
+        .overlay4{
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            right:-280px;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out
+        }
+        .overlay4 > a{
+            width: 40px;
+            height: 40px;
+            background:white;
+            display: inline-block;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            color: #464646;
+        }
+        .box4:hover .overlay4{
+            right:0px;
+        }
+        .box5{
+            position: relative;
+            overflow: hidden;
+            float:left;
+            margin:12px;
+        }
+        .overlay5{
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out
+        }
+        .overlay5 > a{
+            width: 40px;
+            height: 40px;
+            background:white;
+            display: inline-block;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            color: #464646;
+        }
+        .box5:hover .overlay5{
+            right:0px;
+            opacity: 1;
+        }
+        .box5:hover > .overlay5 > .a5-1{
             left: 90px !important;
-            }
-             .b1:hover > .S6 > .a5-2{
+        }.box5:hover > .overlay5 > .a5-2{
             left: 140px !important;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .a5-1{
-                left:60px !important;
-             }
-            .a5-2{
-                left: 170px !important;
-            }
-            .a6-1,.a6-2{
-                transition: all 0.2s linear;
-            }
-            .b1:hover > .S6 > .a6-1{
+        }
+        .a5-1,.a5-2{
+            transition: all 0.2s linear;
+        }
+        .box5:hover .overlay5{
+            right:0px;
+            opacity: 1;
+        }
+        .box5:hover > .overlay5 > .a6-1{
             left: 90px !important;
-            }
-             .b1:hover > .S6 > .a6-2{
+        }.box5:hover > .overlay5 > .a6-2{
             left: 140px !important;
-            }
-            .p1{
-                left: 140px!important;
-            }
-            .a6-1{
-                left:120px !important;
-             }
-            .a6-2{
-                left: 110px !important;
-            }
-            .a7-1,.a7-2{
-                transition: all 0.2s linear;
-                transform: scale(1.2);    
-            }
-            .b1:hover .a7-1, .b1:hover .a7-2{
-                transform: scale(1);
-            }
-            .a8-1,.a8-2{
-                transition: all 0.2s linear;
-                transform: scale(0.5);    
-            }
-            .b1:hover .a8-1, .b1:hover .a8-2{
-                transform: scale(1);
-            }
-            .a9-1,.a9-2{
-                transition: all 0.2s linear;
-            }
-            .b1:hover > .S6 > .a9-1{
-            left: 90px !important;
-            }
-             .b1:hover > .S6 > .a9-2{
-            left: 140px !important;
-            }
-            .b1:hover .a7-1, .b1:hover .a7-2{
-                transform: scale(1);
-            }
-            .a8-1,.a8-2{
-                transition: all 0.2s linear;
-            }
+        }
+        .a6-1,.a6-2{
+            transition: all 0.2s linear;
+        }
+        .a7-1,.a7-2 {
+           transform: scale(1.5,1.5);
+           transition: all 0.3s linear;
+        }
+        .box5:hover .a7-1,.box5:hover .a7-2{
+            transform: scale(1,1);
+        }
+        .a8-1,.a8-2{
             transform: scale(0,0);
-                transition: all 0.1s linear;
-            }
-            .b1:hover .a9-2{
-                transform: scale(1,1);
-            }
-            .a9-1{
-                transform-origin: 62px center;
-                    transform: rotateZ(0deg) scale(0,0);
-                transition: all 0.1s linear;
-            }
-            .b1:hover .a9-1{
-                transform: rotateZ(360deg) scale(1,1);
-            }
-            .b1:hover .a10-1{
-                transform: scale(1,1);
-            }
-            .a10-2{
-                transform-origin: -62px center;
-                transform: rotateZ(0deg) scale(0,0);
-                transition: all  0.1s linear;
-            }
-            .b1:hover .a10-2{
-                transform: rotateZ(360deg) scale(1,1);
-            }
-            .b1:hover .a11-1,.b1:hover .a11-2 {
-                transform: scale(1,1);
-            }
-            .a11-1,.a11-2  {
-                transform-origin: 0px center;
-                transform: rotateZ(0deg) scale(0,0);
-                transition: all  0.1s linear;
-            }
-            .b1:hover .a11-2,.b1:hover .a11-1   {
-                transform: rotateZ(360deg) scale(1,1);
-            }
-
-        </style>
-    </head>
-    <body>
-        <div class="b1"> 
-            <div class=" S S1">
-                <a class="A1" href="#"><i class="fas fa-link"></i></a>
-                <a class="A1 p1" href="#"><i class="fas fa-search"></i></a>
-            </div>
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a8-1,.box5:hover .a8-2{
+            transform: scale(1,1);
+        }
+        .a9-2{
+            transform: scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a9-2{
+            transform: scale(1,1);
+        }
+        .a9-1{
+            transform-origin: 62px center;
+            transform: rotate(0deg) scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a9-1{
+            transform: rotate(360deg) scale(1,1);
+        }
+        .a10-1{
+            transform: scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a10-1{
+            transform: scale(1,1);
+        }
+        .a10-2{
+            transform-origin: -31px center;
+            transform: rotate(0deg) scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a10-2{
+            transform: rotate(360deg) scale(1,1);
+        }
+        .a11-1{
+            transform-origin: 62px center;
+            transform: rotate(0deg) scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a11-1,.box5:hover .a11-2{
+            transform: rotate(-360deg) scale(1,1);
+        }
+        .a11-2{
+            transform-origin: -31px center;
+            transform: rotate(0deg) scale(0,0);
+            transition: all 0.3s linear;
+        }
+        .a12-1{
+            transform: scale(0,0)
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a12-1{
+            transform: scale(1,1);
+        }
+        .a13-1{
+            transform-origin: -137px center;
+            transform: rotate(180deg);
+        }
+        .a13-2{
+            transform-origin: 151px center;
+            transform: rotate(180deg);
+        }
+        .c13{
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a13-1,.box5:hover .a13-2{
+            transform: rotate(0deg);
+        }
+        .a14-1{
+            transform-origin:center -137px;
+            transform: rotate(180deg);
+        }
+        .a14-2{
+            transform-origin:center 151px;
+            transform: rotate(180deg);
+        }
+        .c14{
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a14-1,.box5:hover .a14-2{
+            transform: rotate(0deg);
+        }
+        .a15-1{
+            left: -40px !important;
+            transition: all 0.3s linear;
+        }
+        .a15-2{
+            left:280px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a15-1{
+            left: 90px !important;
+        }
+        .box5:hover .a15-2{
+            left: 140px !important;
+        }
+        .a16-1{
+            top: -40px !important;
+            transition: all 0.3s linear;
+        }
+        .a16-2{
+            top: 190px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a16-1{
+            top:90px !important;
+        }
+        .box5:hover .a16-2{
+            top:90px !important;
+        }
+        .a17-1,.a17-2{
+            border-radius: 0px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a17-1,.box5:hover .a17-2{
+            transform: rotate(-360deg);
+        }
+        .a18-1,.a18-2{
+            border-radius: 0px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a18-1,.box5:hover .a18-2{
+            transform: rotate(360deg);
+        }
+        .a19-1,.a19-2{
+            border-radius: 0px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a19-1,.box5:hover .a19-2{
+            border-radius: 40px !important;
+        }
+        .a20-1,.a20-2{
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a20-1,.box5:hover .a20-2{
+            border-radius:0px !important;
+        }
+        .a21-1,.a21-2{
+            border-radius: 0px !important;
+            transform: scale(0,1);
+            transition: all 0.2s linear;
+        }
+        .box5:hover .a21-1,.box5:hover .a21-2{
+            transform: scale(1,1);
+        }
+        .a22-1,.a22-2{
+            border-radius: 0px !important;
+            transform: scale(1,0);
+            transition: all 0.2s linear;
+        }
+        .box5:hover .a22-1,.box5:hover .a22-2{
+            transform: scale(1,1);
+        }
+        .a23-1,.a23-2{
+            border-radius: 0px !important;
+            transition: all 0.3s linear;
+        }
+        .a23-1{
+            left: -40px !important;
+        }
+        .a23-2{
+            left: 280px !important;
+        }
+        .box5:hover .a23-1{
+            left: 90px !important;
+        }
+        .box5:hover .a23-2{
+            left: 140px !important;
+        }
+        .a24-1{
+            border-radius: 0px !important;
+            top: -40px !important;
+            transition: all 0.3s linear;
+        }
+        .a24-2{
+            border-radius: 0px !important;
+            top: 190px !important;
+            transition: all 0.3s linear;
+        }
+        .box5:hover .a24-1{
+            top:90px !important;
+        }
+        .box5:hover .a24-2{
+            top:90px !important;
+        }
+        .a25-1{
+            transition: all 0.3s cubic-bezier(.02,1.95,.63,1.26) 0s;
+        }
+        .a25-2{
+            transition: all 0.3s cubic-bezier(.02,1.95,.63,1.26) 0.1s;
+        }
+        .a25-1,.a25-2{
+            transform:scale(0,0);
+        }
+        .box5:hover .a25-1,.box5:hover .a25-2{
+            transform:scale(1,1);
+        }
+        .a26-1{
+            transform: scale(7,7);
+            transition: all 0.2s linear;
+        }
+        .a26-2{
+            transform: scale(7,7);
+            transition: all 0.2s linear 0.1s;
+        }
+        .box5:hover .a26-1,.box5:hover .a26-2{
+            transform:scale(1,1);
+    </style>
+</head>
+<body>
+    <div class="common box1">
+        <div class="common overlay1">
+            <a href="#"> <i class="fas fa-link"></i> </a>
+            <a class="tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class=" S S2">
-                <a class="A1" href=" A1 3"><i class="fas fa-link"></i></a>
-                <a class=" A1 p1" href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box2">
+        <div class="common overlay2">
+            <a href="#"> <i class="fas fa-link"></i> </a>
+            <a class="tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class=" S S3">
-                <a class="A1" href="A1 3"><i class="fas fa-link"></i></a>
-                <a class="A1 p1" href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box3">
+        <div class="common overlay3">
+            <a href="#"> <i class="fas fa-link"></i> </a>
+            <a class="tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S4">
-                <a class="A1" href="A1  3"><i class="fas fa-link"></i></a>
-                <a class=" A1 p1" href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box4">
+        <div class="common overlay4">
+            <a href="#"> <i class="fas fa-link"></i> </a>
+            <a class="tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S5">
-                <a class="A1 a5-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a5-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a5-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a5-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a5-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a5-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a6-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a6-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a6-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a6-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5 overlay7">
+            <a class="a7-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a7-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a7-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a7-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a8-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a8-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a8-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a8-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a9-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a9-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a9-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a9-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>    
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a10-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a10-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a10-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a10-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>    
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a11-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a11-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
         </div>
-        <div class="b1">
-            <div class="S S6">
-                <a class="A1 a11-1" href="A1 3  "><i class="fas fa-link"></i></a>
-                <a class=" A1 p1 a11-2 " href="#"><i class="fas fa-search"></i></a>
-            </div>    
-        </div>    
-    </body>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a12-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a12-2 tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a13-1 c13" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a13-2 c13 tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a14-1 c14" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a14-2 c14 tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a15-1 c15" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a15-2 c15 tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a16-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a16-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a17-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a17-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a18-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a18-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a19-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a19-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a20-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a20-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a21-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a21-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a22-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a22-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a23-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a23-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a24-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a24-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>  
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a25-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a25-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>   
+    <div class="common box5">
+        <div class="common overlay5">
+            <a class="a26-1" href="#"> <i class="fas fa-link"></i> </a>
+            <a class="a26-2  tagb" href="#"> <i class="fas fa-search"></i> </a>
+        </div>
+    </div>   
+</body>
 </html>
